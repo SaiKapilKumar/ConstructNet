@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { BsCheckCircle } from "react-icons/bs";
-import FiverrLogo from "../FiverrLogo";
+import FiverrLogo from "../ConstructNetLogo";
 
 function FiverrBusiness() {
   return (

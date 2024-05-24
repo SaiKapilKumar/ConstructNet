@@ -7,7 +7,7 @@ import {
   FiLinkedin,
   FiTwitter,
 } from "react-icons/fi";
-import FiverrLogo from "./FiverrLogo";
+import FiverrLogo from "./ConstructNetLogo";
 import { categories } from "../utils/categories";
 
 function Footer() {

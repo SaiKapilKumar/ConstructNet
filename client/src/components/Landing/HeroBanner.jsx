@@ -68,10 +68,10 @@ function HomeBanner() {
       </div>
       <div className="z-10 relative w-[650px] flex justify-center flex-col h-full gap-5 ml-20">
         <h1 className="text-white text-5xl leading-snug">
-          Find the perfect&nbsp;
-          <i>freelance</i>
+          Connecting you to&nbsp;
+          <i>Quality</i>
           <br />
-          services for your business
+          Services & Professionals
         </h1>
         <div className="flex align-middle">
           <div className="relative">
@@ -79,13 +79,13 @@ function HomeBanner() {
             <input
               type="text"
               className="h-14 w-[450px] pl-10 rounded-md rounded-r-none"
-              placeholder={`Try "building mobile app"`}
+              placeholder={`Try "Construction Services"`}
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
           </div>
           <button
-            className="bg-[#1DBF73] text-white px-12 text-lg font-semibold rounded-r-md"
+            className="bg-orange-500 text-white px-12 text-lg font-semibold rounded-r-md"
             onClick={() => router.push(`/search?q=${searchData}`)}
           >
             Search
@@ -96,27 +96,27 @@ function HomeBanner() {
           <ul className="flex gap-5">
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
-              onClick={() => router.push("/search?q=website design")}
+              onClick={() => router.push("/search?q=architects")}
             >
-              Website Design
+              Architects
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
-              onClick={() => router.push("/search?q=wordpress")}
+              onClick={() => router.push("/search?q=interior designers")}
             >
-              Wordpress
+              Interior Designers
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
-              onClick={() => router.push("/search?q=logo design")}
+              onClick={() => router.push("/search?q=civil engineers")}
             >
-              Logo Design
+              Civil Engineers
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
-              onClick={() => router.push("/search?q=ai services")}
+              onClick={() => router.push("/search?q=consultants")}
             >
-              AI Services
+              Consultants
             </li>
           </ul>
         </div>

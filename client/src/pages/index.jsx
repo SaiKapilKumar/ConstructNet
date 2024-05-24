@@ -8,6 +8,7 @@ import PopularServices from "../components/Landing/PopularServices";
 import Services from "../components/Landing/Services";
 import { useStateProvider } from "../context/StateContext";
 import React from "react";
+import WhyChooseUs from "../components/Landing/WhyChooseUs";  
 
 function Index() {
   const [{ showLoginModal, showSignupModal }] = useStateProvider();
@@ -15,8 +16,9 @@ function Index() {
   return (
     <div>
       <HeroBanner />
-      <Companies />
       <PopularServices />
+      <WhyChooseUs />
+      {/* <Companies /> */}
       <Everything />
       <Services />
       <FiverrBusiness />
