@@ -273,7 +273,7 @@ export const addReview = async (req, res, next) => {
       }
       return res
         .status(400)
-        .send("You need to purchase the gig in order to add review.");
+        .send("You need to purchase the service in order to add review.");
     }
     return res.status(400).send("userId and gigId is required.");
   } catch (err) {

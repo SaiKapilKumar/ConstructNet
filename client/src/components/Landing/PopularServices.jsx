@@ -21,9 +21,11 @@ function PopularServices() {
       label: "Build your brand",
       image: "/service2.jpg",
     },
-    { name: "Consultants",
+    { 
+      name: "Consultants",
       label: "Provide expert advice", 
-      image: "/service7.jpg" },
+      image: "/service7.jpg" 
+    },
     {
       name: "Project Managers",
       label: "Oversee your projects",
@@ -51,7 +53,7 @@ function PopularServices() {
       <h2 className="text-4xl mb-5 font-bold text-left px-4">
         Popular Services
       </h2>
-      <ul className="grid grid-cols-4 gap-16 px-4 pt-8">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 pt-8">
         {popularServicesData.map(({ name, label, image }) => {
           return (
             <li
@@ -61,16 +63,16 @@ function PopularServices() {
             >
               <div className="absolute z-10 text-white left-5 top-4">
                 <span>{label}</span>
-                <h6 className="font-extrabold text-2xl">{name}</h6>
+                <h6 className="font-extrabold text-xl sm:text-2xl">{name}</h6>
               </div>
-              <div className="h-64 w-56 opacity-75 hover:opacity-50 transition-opacity duration-500"> {/* Adjusted card size and opacity */}
+              <div className="h-64 w-full sm:w-56 opacity-75 hover:opacity-50 transition-opacity duration-500"> 
                 <Image
                   src={image}
                   fill
                   alt="service"
                   className="object-cover rounded-lg shadow-lg"
-                  quality={75} // Setting the image quality to 75%
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Responsive sizes
+                  quality={75}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
             </li>

@@ -126,11 +126,12 @@ function Navbar() {
       setIsLoaded(true);
     }
   }, [cookies, userInfo, dispatch]);
+
   const [isContextMenuVisible, setIsContextMenuVisible] = useState(false);
+
   useEffect(() => {
     const clickListener = (e) => {
       e.stopPropagation();
-
       if (isContextMenuVisible) setIsContextMenuVisible(false);
     };
     if (isContextMenuVisible) {
@@ -140,12 +141,12 @@ function Navbar() {
       window.removeEventListener("click", clickListener);
     };
   }, [isContextMenuVisible]);
+
   const ContextMenuData = [
     {
       name: "Profile",
       callback: (e) => {
         e.stopPropagation();
-
         setIsContextMenuVisible(false);
         router.push("/profile");
       },
@@ -154,7 +155,6 @@ function Navbar() {
       name: "Logout",
       callback: (e) => {
         e.stopPropagation();
-
         setIsContextMenuVisible(false);
         router.push("/logout");
       },
@@ -165,7 +165,7 @@ function Navbar() {
     <>
       {isLoaded && (
         <nav
-          className={`w-full px-24 flex justify-between items-center py-8  top-0 z-30 transition-all duration-300 ${
+          className={`w-full px-6 md:px-24 flex justify-between items-center py-4 md:py-8 top-0 z-30 transition-all duration-300 ${
             navFixed || userInfo
               ? "fixed bg-white border-b border-gray-200"
               : "absolute bg-transparent border-transparent"
@@ -186,7 +186,7 @@ function Navbar() {
             <input
               type="text"
               placeholder="What service are you looking for today?"
-              className="w-[25rem] py-2.5 px-4 border rounded-full"
+              className="w-full md:w-[25rem] py-2.5 px-4 border rounded-full"
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
@@ -201,39 +201,37 @@ function Navbar() {
             </button>
           </div>
           {!userInfo ? (
-            <ul className="flex gap-8 items-center">
-              {links.map(({ linkName, handler, type }) => {
-                return (
-                  <li
-                    key={linkName}
-                    className={`${
-                      navFixed
-                        ? "text-black hover:text-orange-500"
-                        : "text-white hover:text-orange-500"
-                    } font-medium`}
-                  >
-                    {type === "link" && <Link href={handler}>{linkName}</Link>}
-                    {type === "button" && (
-                      <button onClick={handler}>{linkName}</button>
-                    )}
-                    {type === "button2" && (
-                      <button
-                        onClick={handler}
-                        className={`border text-md font-semibold py-1 px-3 rounded-sm ${
-                          navFixed
-                            ? "border-orange-500 text-orange-500"
-                            : "border-white text-white"
-                        } hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-500`}
-                      >
-                        {linkName}
-                      </button>
-                    )}
-                  </li>
-                );
-              })}
+            <ul className="hidden md:flex gap-8 items-center">
+              {links.map(({ linkName, handler, type }) => (
+                <li
+                  key={linkName}
+                  className={`${
+                    navFixed
+                      ? "text-black hover:text-orange-500"
+                      : "text-white hover:text-orange-500"
+                  } font-medium`}
+                >
+                  {type === "link" && <Link href={handler}>{linkName}</Link>}
+                  {type === "button" && (
+                    <button onClick={handler}>{linkName}</button>
+                  )}
+                  {type === "button2" && (
+                    <button
+                      onClick={handler}
+                      className={`border text-md font-semibold py-1 px-3 rounded-sm ${
+                        navFixed
+                          ? "border-orange-500 text-orange-500"
+                          : "border-white text-white"
+                      } hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-500`}
+                    >
+                      {linkName}
+                    </button>
+                  )}
+                </li>
+              ))}
             </ul>
           ) : (
-            <ul className="flex gap-10 items-center">
+            <ul className="hidden md:flex gap-10 items-center">
               {isSeller && (
                 <li
                   className="cursor-pointer text-orange-500 font-medium"
@@ -251,14 +249,14 @@ function Navbar() {
 
               {isSeller ? (
                 <li
-                  className="cursor-pointer font-medium  text-black hover:text-orange-500"
+                  className="cursor-pointer font-medium text-black hover:text-orange-500"
                   onClick={handleModeSwitch}
                 >
                   Switch To Buyer
                 </li>
               ) : (
                 <li
-                  className="cursor-pointer font-medium  text-black hover:text-orange-500"
+                  className="cursor-pointer font-medium text-black hover:text-orange-500"
                   onClick={handleModeSwitch}
                 >
                   Switch To Seller
