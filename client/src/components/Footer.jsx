@@ -7,7 +7,7 @@ import {
   FiLinkedin,
   FiTwitter,
 } from "react-icons/fi";
-import FiverrLogo from "./ConstructNetLogo";
+import ConstructNetLogo from "./ConstructNetLogo";
 import { categories } from "../utils/categories";
 
 function Footer() {
@@ -61,8 +61,8 @@ function Footer() {
       links: [
         { name: "Help & Support", link: "#" },
         { name: "Trust & Safety", link: "#" },
-        { name: "Selling on Fiverr", link: "#" },
-        { name: "Buying on Fiverr", link: "#" },
+        { name: "Selling on ConstructNet", link: "#" },
+        { name: "Buying on ConstructNet", link: "#" },
       ],
     },
     {
@@ -82,16 +82,16 @@ function Footer() {
       ],
     },
     {
-      headerName: "Move From Fiverr",
+      headerName: "Move From ConstructNet",
       links: [
-        { name: "Fiverr Business", link: "#" },
-        { name: "Fiverr Pro", link: "#" },
-        { name: "Fiverr Logo Maker", link: "#" },
-        { name: "Fiverr Guides", link: "#" },
+        { name: "ConstructNet Business", link: "#" },
+        { name: "ConstructNet Pro", link: "#" },
+        { name: "ConstructNet Logo Maker", link: "#" },
+        { name: "ConstructNet Guides", link: "#" },
         { name: "Get Inspired", link: "#" },
-        { name: "Fiverr Select", link: "#" },
+        { name: "ConstructNet Select", link: "#" },
         { name: "ClearVoice", link: "#" },
-        { name: "Fiverr Workspace", link: "#" },
+        { name: "ConstructNet Workspace", link: "#" },
         { name: "Learn", link: "#" },
         { name: "Working Not Working", link: "#" },
       ],
@@ -116,7 +116,7 @@ function Footer() {
         })}
       </ul>
       <div className="mt-12 flex items-center justify-between">
-        <FiverrLogo fillColor={"#404145"} />
+        <ConstructNetLogo fillColor={"#404145"} />
         <ul className="flex gap-5">
           {socialLinks.map(({ icon, link, name }) => (
             <li

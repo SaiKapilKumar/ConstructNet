@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import { BsCheckCircle } from "react-icons/bs";
-import FiverrLogo from "../ConstructNetLogo";
+import ConstructNetLogo from "../ConstructNetLogo";
 
-function FiverrBusiness() {
+function ConstructNetBusiness() {
   return (
     <div className="bg-[#0d084d] px-20 py-16 flex gap-10">
       <div className="text-white flex flex-col gap-6 justify-center items-start">
         <div className="flex gap-2">
-          <FiverrLogo fillColor={"#ffffff"} />
+          <ConstructNetLogo fillColor={"#ffffff"} />
           <span className="text-white text-3xl font-bold">Business</span>
         </div>
         <h2 className="text-3xl font-bold">A solution built for business</h2>
@@ -38,7 +38,7 @@ function FiverrBusiness() {
           className="border text-base font-medium px-5 py-2   border-[#1DBF73] bg-[#1DBF73] text-white rounded-md"
           type="button"
         >
-          Explore Fiverr Business
+          Explore ConstructNet Business
         </button>
       </div>
       <div className="relative h-[512px] w-2/3">
@@ -48,4 +48,4 @@ function FiverrBusiness() {
   );
 }
 
-export default FiverrBusiness;
+export default ConstructNetBusiness;

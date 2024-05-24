@@ -1,5 +1,5 @@
 {
-  "name": "fiverr-clone",
+  "name": "constructnet",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,6 +23,7 @@
     "react-cookie": "^4.1.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-parallax-tilt": "^1.7.226",
     "typescript": "5.0.3"
   },
   "devDependencies": {

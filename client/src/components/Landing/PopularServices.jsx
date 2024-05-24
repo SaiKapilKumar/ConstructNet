@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import Tilt from "react-parallax-tilt";
 
 function PopularServices() {
   const router = useRouter();
@@ -8,38 +9,40 @@ function PopularServices() {
     {
       name: "Architects",
       label: "Design your structures",
-      image: "/service1.png",
+      image: "/service1.jpg",
     },
     {
       name: "Interior Designers",
       label: "Enhance your interiors",
-      image: "/service3.jpeg",
+      image: "/service3.jpg",
     },
     {
       name: "Civil Engineers",
       label: "Build your brand",
-      image: "/service2.jpeg",
+      image: "/service2.jpg",
     },
-    { name: "Consultants", label: "Provide expert advice", image: "/service7.jpeg" },
+    { name: "Consultants",
+      label: "Provide expert advice", 
+      image: "/service7.jpg" },
     {
       name: "Project Managers",
       label: "Oversee your projects",
-      image: "/service4.jpeg",
+      image: "/service4.jpg",
     },
     {
       name: "Surveyors",
       label: "Measure and map your site",
-      image: "/service5.jpeg",
+      image: "/service5.jpg",
     },
     {
       name: "Safety Inspectors",
       label: "Ensure safety standards",
-      image: "/service6.jpeg",
+      image: "/service6.jpg",
     },
     {
       name: "Construction Workers",
       label: "Build with expertise",
-      image: "/service8.jpeg",
+      image: "/service8.jpg",
     },
   ];
 

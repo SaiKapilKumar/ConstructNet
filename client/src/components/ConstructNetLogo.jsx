@@ -1,6 +1,6 @@
 import React from "react";
 
-function FiverrLogo({ fillColor }) {
+function ConstructNetLogo({ fillColor }) {
   return (
     // 234 44
     <svg
@@ -59,4 +59,4 @@ function FiverrLogo({ fillColor }) {
   );
 }
 
-export default FiverrLogo;
+export default ConstructNetLogo;

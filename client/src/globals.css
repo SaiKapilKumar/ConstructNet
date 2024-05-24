@@ -11,3 +11,24 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgb(173, 173, 173);
 }
+
+/* Add this to your global CSS file to enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax-item {
+  transform: translateY(100px) scale(0.9);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.parallax-item-visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Ensure smooth scrolling within the container */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
