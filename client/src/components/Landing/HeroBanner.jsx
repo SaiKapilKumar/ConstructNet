@@ -9,7 +9,7 @@ const gradients = [
   "bg-gradient-to-b from-black via-blue-900 to-black",
   "bg-gradient-to-b from-black via-pink-900 to-black",
   "bg-gradient-to-b from-black via-red-900 to-black",
-  "bg-gradient-to-b from-black via-teal-900 to-black"
+  "bg-gradient-to-b from-black via-teal-900 to-black",
 ];
 
 function HomeBanner() {
@@ -32,15 +32,20 @@ function HomeBanner() {
   };
 
   const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSearch();
     }
   };
 
   return (
-    <div className={`relative h-screen ${gradients[gradientIndex]} transition-all duration-1000`}>
+    <div
+      className={`relative h-screen ${gradients[gradientIndex]} transition-all duration-1000`}
+    >
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 text-center">
-        <h1 className="text-white text-5xl sm:text-5xl lg:text-6xl leading-relaxed mb-10" style={{ lineHeight: '1.4' }}>
+        <h1
+          className="text-white text-5xl sm:text-5xl lg:text-6xl leading-relaxed mb-10"
+          style={{ lineHeight: "1.4" }}
+        >
           Connecting you to <i>Quality</i> Services & Professionals
         </h1>
         <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-3xl gap-4 mb-4">
@@ -67,14 +72,22 @@ function HomeBanner() {
         <div className="text-white flex flex-wrap justify-center gap-4 mb-4">
           Popular:
           <ul className="flex flex-wrap gap-2">
-            {["architects", "interior designers", "civil engineers", "consultants"].map((item) => (
+            {[
+              "architects",
+              "interior designers",
+              "civil engineers",
+              "consultants",
+            ].map((item) => (
               <li
                 key={item}
                 className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
                 onClick={() => router.push(`/search?q=${item}`)}
                 aria-label={`Search for ${item}`}
               >
-                {item.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}
+                {item
+                  .split(" ")
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(" ")}
               </li>
             ))}
           </ul>

@@ -165,9 +165,9 @@ function Navbar() {
     <>
       {isLoaded && (
         <nav
-          className={`w-full px-6 md:px-24 flex justify-between items-center py-4 md:py-8 top-0 z-30 transition-all duration-300 ${
+          className={`w-full px-28 md:px-28 flex justify-between items-center py-4 md:py-8 top-0 z-30 transition-all duration-300 ${
             navFixed || userInfo
-              ? "fixed bg-white border-b border-gray-200"
+              ? "fixed bg-white/20 shadow-lg backdrop-blur-3xl"
               : "absolute bg-transparent border-transparent"
           }`}
         >
@@ -186,7 +186,7 @@ function Navbar() {
             <input
               type="text"
               placeholder="What service are you looking for today?"
-              className="w-full md:w-[25rem] py-2.5 px-4 border rounded-full"
+              className="w-full md:w-[20rem] sm:w-[10rem] py-2.5 px-4 border rounded-full"
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
@@ -207,7 +207,7 @@ function Navbar() {
                   key={linkName}
                   className={`${
                     navFixed
-                      ? "text-black hover:text-orange-500"
+                      ? "text-white hover:text-orange-500"
                       : "text-white hover:text-orange-500"
                   } font-medium`}
                 >
@@ -241,7 +241,7 @@ function Navbar() {
                 </li>
               )}
               <li
-                className="cursor-pointer text-black hover:text-orange-500 font-medium"
+                className="cursor-pointer text-white hover:text-orange-500 font-medium"
                 onClick={handleOrdersNavigate}
               >
                 Orders
@@ -249,14 +249,14 @@ function Navbar() {
 
               {isSeller ? (
                 <li
-                  className="cursor-pointer font-medium text-black hover:text-orange-500"
+                  className="cursor-pointer font-medium text-white hover:text-orange-500"
                   onClick={handleModeSwitch}
                 >
                   Switch To Buyer
                 </li>
               ) : (
                 <li
-                  className="cursor-pointer font-medium text-black hover:text-orange-500"
+                  className="cursor-pointer font-medium text-white hover:text-orange-500"
                   onClick={handleModeSwitch}
                 >
                   Switch To Seller
@@ -279,8 +279,8 @@ function Navbar() {
                     className="rounded-full"
                   />
                 ) : (
-                  <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative">
-                    <span className="text-xl text-white">
+                  <div className="bg-blue-100 h-10 w-10 flex items-center justify-center rounded-full relative">
+                    <span className="text-xl text-black">
                       {userInfo &&
                         userInfo?.email &&
                         userInfo?.email.split("")[0].toUpperCase()}
