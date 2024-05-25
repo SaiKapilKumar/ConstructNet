@@ -1,0 +1,609 @@
+{
+	"tables": {},
+	"relations": {},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"connectionId": "23489b03-2276-4862-a65f-9457f5d375b1",
+		"connectionVersion": "PostgreSQL 16.3",
+		"activeDiagram": "482be63d-0467-402c-9f72-9850cac06ee1",
+		"caseConvention": "under",
+		"color": "transparent",
+		"def_coltopk": true,
+		"desc": "",
+		"id": "0022816a-9e28-40d4-a0ec-c011156048bb",
+		"isDirty": true,
+		"name": "PostgreSQL 16",
+		"parentTableInFkCols": true,
+		"path": "",
+		"replaceSpace": "_",
+		"sideSelections": true,
+		"storedin": {
+			"major": 8,
+			"minor": 5,
+			"extra": 1
+		},
+		"laststoredin": {
+			"major": 8,
+			"minor": 5,
+			"extra": 1
+		},
+		"type": "PG",
+		"version": 1,
+		"lastSaved": "",
+		"pg": {
+			"schema": "public"
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed",
+			"includeGeneratedNames": "always"
+		},
+		"nameAutoGeneration": {
+			"keys": true,
+			"indexes": true,
+			"relations": true
+		},
+		"writeFileParam": false,
+		"authorName": "",
+		"companyDetails": "",
+		"companyUrl": ""
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"482be63d-0467-402c-9f72-9850cac06ee1": {
+			"id": "482be63d-0467-402c-9f72-9850cac06ee1",
+			"lineColor": "transparent",
+			"description": "",
+			"diagramItems": {},
+			"isOpen": true,
+			"main": true,
+			"name": "Main Diagram",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd",
+			"showEstimatedSize": false,
+			"showSchemaContainer": false,
+			"showEmbeddedInParents": true,
+			"showCardinalityCaptions": false,
+			"showRelationshipNames": false,
+			"showLineCaptions": true,
+			"showColumns": true,
+			"showColumnDataTypes": true,
+			"showSampleData": false,
+			"showTableIndexes": false,
+			"showTableDescriptions": false,
+			"showRelations": true,
+			"showHorizontal": false,
+			"showDescriptions": true,
+			"showIndicators": false,
+			"showProgress": false,
+			"showIndicatorCaptions": false,
+			"backgroundImage": "na",
+			"descriptionsColor": "transparent",
+			"boxSize": "0",
+			"boxSpacing": "2",
+			"boxAlign": "center",
+			"lineWidth": "2",
+			"embeddedSpacing": "2",
+			"showLabels": true,
+			"showMainIcon": true,
+			"showCustomizations": false
+		},
+		"0f130d9d-dd90-4556-b5f7-231f05bd5ade": {
+			"name": "Diagram 2",
+			"description": "",
+			"id": "0f130d9d-dd90-4556-b5f7-231f05bd5ade",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": false,
+			"diagramItems": {},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd",
+			"showHorizontal": true,
+			"showDescriptions": true,
+			"showIndicators": true,
+			"showProgress": true,
+			"lineWidth": "2",
+			"boxSize": "0",
+			"boxSpacing": "2",
+			"boxAlign": "center",
+			"showIndicatorCaptions": true,
+			"showEstimatedSize": false,
+			"showSchemaContainer": true,
+			"showEmbeddedInParents": true,
+			"showCardinalityCaptions": true,
+			"showRelationshipNames": false,
+			"showLineCaptions": false,
+			"showColumns": true,
+			"showColumnDataTypes": true,
+			"showSampleData": false,
+			"showTableIndexes": true,
+			"showTableDescriptions": false,
+			"showRelations": true,
+			"backgroundImage": "na",
+			"descriptionsColor": "transparent",
+			"embeddedSpacing": "2",
+			"showMainIcon": true,
+			"showLabels": true,
+			"showCustomizations": false
+		},
+		"52fcaea6-e46b-41f7-8352-b4e04518322e": {
+			"name": "Diagram 3",
+			"description": "",
+			"id": "52fcaea6-e46b-41f7-8352-b4e04518322e",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": false,
+			"diagramItems": {},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd",
+			"showHorizontal": true,
+			"showDescriptions": true,
+			"showIndicators": true,
+			"showProgress": true,
+			"lineWidth": "2",
+			"boxSize": "0",
+			"boxSpacing": "2",
+			"boxAlign": "center",
+			"showIndicatorCaptions": true,
+			"showEstimatedSize": false,
+			"showSchemaContainer": true,
+			"showEmbeddedInParents": true,
+			"showCardinalityCaptions": true,
+			"showRelationshipNames": false,
+			"showLineCaptions": false,
+			"showColumns": true,
+			"showColumnDataTypes": true,
+			"showSampleData": false,
+			"showTableIndexes": true,
+			"showTableDescriptions": false,
+			"showRelations": true,
+			"backgroundImage": "na",
+			"descriptionsColor": "transparent",
+			"embeddedSpacing": "2",
+			"showMainIcon": true,
+			"showLabels": true,
+			"showCustomizations": false
+		}
+	},
+	"diagramsOrder": [
+		"0f130d9d-dd90-4556-b5f7-231f05bd5ade",
+		"52fcaea6-e46b-41f7-8352-b4e04518322e"
+	],
+	"order": [],
+	"collapsedTreeItems": [],
+	"reverseStats": {
+		"diffReport": {
+			"statistics": [
+				{
+					"caption": "Tables",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Composites",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Columns",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Indexes",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Relations",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Functions",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Procedures",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Rule",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Policies",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Sequences",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Enum",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Domains",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Views",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Materialized Views",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				},
+				{
+					"caption": "Triggers",
+					"count": {
+						"added": {
+							"count": 0,
+							"idNames": []
+						},
+						"removed": {
+							"count": 0,
+							"idNames": []
+						},
+						"modified": {
+							"count": 0,
+							"idNames": []
+						},
+						"total": 0
+					}
+				}
+			]
+		},
+		"currentModel": {
+			"model": {
+				"connectionId": "23489b03-2276-4862-a65f-9457f5d375b1",
+				"connectionVersion": "PostgreSQL 16.3",
+				"activeDiagram": "482be63d-0467-402c-9f72-9850cac06ee1",
+				"caseConvention": "under",
+				"color": "transparent",
+				"def_coltopk": true,
+				"desc": "",
+				"id": "0022816a-9e28-40d4-a0ec-c011156048bb",
+				"isDirty": true,
+				"name": "PostgreSQL 16",
+				"parentTableInFkCols": true,
+				"path": "",
+				"replaceSpace": "_",
+				"sideSelections": true,
+				"storedin": {
+					"major": 8,
+					"minor": 5,
+					"extra": 1
+				},
+				"laststoredin": {
+					"major": 8,
+					"minor": 5,
+					"extra": 1
+				},
+				"type": "PG",
+				"version": 1,
+				"filePath": "",
+				"lastSaved": "",
+				"pg": {
+					"schema": "public"
+				},
+				"sqlSettings": {
+					"wrapLines": true,
+					"wrapOffset": 80,
+					"indent": true,
+					"indentationString": "spaces",
+					"indentationSize": 2,
+					"limitItemsOnLine": true,
+					"maxListItemsOnLine": 3,
+					"statementDelimiter": ";",
+					"routineDelimiter": ";",
+					"keywordCase": "upper",
+					"identiferCase": "original",
+					"includeSchema": "always",
+					"quotation": "if_needed",
+					"includeGeneratedNames": "always"
+				},
+				"nameAutoGeneration": {
+					"keys": true,
+					"indexes": true,
+					"relations": true
+				},
+				"writeFileParam": false,
+				"authorName": "",
+				"companyDetails": "",
+				"companyUrl": ""
+			},
+			"tables": {},
+			"relations": {},
+			"otherObjects": {}
+		},
+		"updatedModel": {
+			"model": {
+				"connectionId": "23489b03-2276-4862-a65f-9457f5d375b1",
+				"connectionVersion": "PostgreSQL 16.3",
+				"activeDiagram": "482be63d-0467-402c-9f72-9850cac06ee1",
+				"caseConvention": "under",
+				"color": "transparent",
+				"def_coltopk": true,
+				"desc": "",
+				"id": "0022816a-9e28-40d4-a0ec-c011156048bb",
+				"isDirty": true,
+				"name": "PostgreSQL 16",
+				"parentTableInFkCols": true,
+				"path": "",
+				"replaceSpace": "_",
+				"sideSelections": true,
+				"storedin": {
+					"major": 8,
+					"minor": 5,
+					"extra": 1
+				},
+				"laststoredin": {
+					"major": 8,
+					"minor": 5,
+					"extra": 1
+				},
+				"type": "PG",
+				"version": 1,
+				"filePath": "",
+				"lastSaved": "",
+				"pg": {
+					"schema": "public"
+				},
+				"sqlSettings": {
+					"wrapLines": true,
+					"wrapOffset": 80,
+					"indent": true,
+					"indentationString": "spaces",
+					"indentationSize": 2,
+					"limitItemsOnLine": true,
+					"maxListItemsOnLine": 3,
+					"statementDelimiter": ";",
+					"routineDelimiter": ";",
+					"keywordCase": "upper",
+					"identiferCase": "original",
+					"includeSchema": "always",
+					"quotation": "if_needed",
+					"includeGeneratedNames": "always"
+				},
+				"nameAutoGeneration": {
+					"keys": true,
+					"indexes": true,
+					"relations": true
+				},
+				"writeFileParam": false,
+				"authorName": "",
+				"companyDetails": "",
+				"companyUrl": ""
+			},
+			"tables": {},
+			"relations": {},
+			"otherObjects": {}
+		}
+	}
+}
