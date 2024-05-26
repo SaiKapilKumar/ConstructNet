@@ -191,7 +191,7 @@ function Navbar() {
               onChange={(e) => setSearchData(e.target.value)}
             />
             <button
-              className="ml-2 bg-gray-900 py-1.5 text-white w-16 flex justify-center items-center rounded-full hover:bg-orange-500"
+              className="ml-1.5 text-white w-11 flex justify-center items-center rounded-full transition-transform duration-500 transform hover:-translate-y-1 cursor-pointer"
               onClick={() => {
                 setSearchData("");
                 router.push(`/search?q=${searchData}`);
@@ -207,8 +207,8 @@ function Navbar() {
                   key={linkName}
                   className={`${
                     navFixed
-                      ? "text-white hover:text-orange-500"
-                      : "text-white hover:text-orange-500"
+                      ? "text-white hover:text-orange-500  transition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
+                      : "text-white hover:text-orange-500 tranition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
                   } font-medium`}
                 >
                   {type === "link" && <Link href={handler}>{linkName}</Link>}
@@ -241,7 +241,7 @@ function Navbar() {
                 </li>
               )}
               <li
-                className="cursor-pointer text-white hover:text-orange-500 font-medium"
+                className="font-medium text-white hover:text-orange-500 tranition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
                 onClick={handleOrdersNavigate}
               >
                 Orders
@@ -249,14 +249,14 @@ function Navbar() {
 
               {isSeller ? (
                 <li
-                  className="cursor-pointer font-medium text-white hover:text-orange-500"
+                  className="font-medium text-white hover:text-orange-500 tranition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
                   onClick={handleModeSwitch}
                 >
                   Switch To Buyer
                 </li>
               ) : (
                 <li
-                  className="cursor-pointer font-medium text-white hover:text-orange-500"
+                  className="font-medium text-white hover:text-orange-500 tranition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
                   onClick={handleModeSwitch}
                 >
                   Switch To Seller

@@ -10,7 +10,7 @@ function Services() {
   const router = useRouter();
 
   const settings = {
-    dots: false, // Remove dots
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -18,7 +18,7 @@ function Services() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     centerMode: true,
-    centerPadding: '10px' // Center and reduce padding
+    centerPadding: "0px",
   };
 
   function SampleNextArrow(props) {
@@ -29,9 +29,9 @@ function Services() {
         style={{
           ...style,
           display: "block",
-          right: "-15px", // Adjust right position
+          right: "20px",
           zIndex: 1,
-          background: "none", // Remove background
+          background: "none",
         }}
         onClick={onClick}
       />
@@ -46,9 +46,9 @@ function Services() {
         style={{
           ...style,
           display: "block",
-          left: "-15px", // Adjust left position
+          left: "20px",
           zIndex: 1,
-          background: "none", // Remove background
+          background: "none",
         }}
         onClick={onClick}
       />
@@ -56,35 +56,51 @@ function Services() {
   }
 
   return (
-    <div className="services-container">
-      <h2 className="text-5xl mb-10 text-[#404145] font-bold text-center">
+    <div className="services-container py-20 bg-gradient-to-b from-gray-900 to-black backdrop-filter backdrop-blur-lg bg-opacity-50 rounded-lg">
+      <h2 className="text-5xl mb-20 text-white font-bold text-center">
         Tailored solutions to fit your requirements
       </h2>
       <Slider {...settings}>
         {categories.map(({ name, logo }, index) => (
           <div key={`${name}-${index}`} className="p-1">
             <div
-              className="flex flex-col justify-center items-center cursor-pointer hover:shadow-2xl transition-all duration-500 mx-1 my-3"
+              className="flex flex-col justify-center items-center cursor-pointer hover:shadow-2xl transition-all duration-500 mx-1 my-3 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-lg shine-effect"
               onClick={() => router.push(`/search?category=${name}`)}
-              style={{ width: "300px", height: "200px", margin: "0 5px" }} // Adjust card size and margin
+              style={{ width: "260px", height: "220px", margin: "0 auto" }}
             >
               <Image src={logo} alt="category" height={70} width={70} />
-              <span>{name}</span>
+              <span className="text-white mt-2">{name}</span>
             </div>
           </div>
         ))}
       </Slider>
       <style jsx global>{`
         .slick-prev:before, .slick-next:before {
-          color: black;
+          color: white;
         }
         .slick-prev:hover:before, .slick-next:hover:before {
           color: grey;
         }
-        .services-container {
-          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-          padding: 40px;
-          border-radius: 8px;
+        .shine-effect {
+          position: relative;
+          overflow: hidden;
+        }
+        .shine-effect:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -75%;
+          width: 50%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.2);
+          transform: skewX(-25deg);
+          transition: left 0.7s ease-in-out;
+        }
+        .shine-effect:hover:before {
+          left: 125%;
+        }
+        .slick-slide > div {
+          margin: 0 5px;
         }
       `}</style>
     </div>

@@ -38,48 +38,59 @@ function Everything() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-violet-950 via-violet-800 to-violet-950 flex py-20 justify-between px-24">
-      <div className="w-2/4 pr-10">
-        <h2 className="text-4xl mb-5 text-white font-extrabold">
-          The best part? Everything.
-        </h2>
-        <div className="p-8 bg-violet-700 bg-opacity-60 rounded-lg">
-          <Accordion
-            allowZeroExpanded
-            preExpanded={[openIndex]}
-            onChange={(expandedItems) => setOpenIndex(expandedItems[0])}
-          >
-            {everythingData.map(({ title, subtitle, description }, index) => {
-              return (
-                <AccordionItem
-                  key={title}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                  onClick={() => setOpenIndex(index)}
-                  className={`transition-all duration-300 mb-8 ${
-                    hoveredIndex === index ? "bg-violet-800 p-4 rounded-lg" : ""
-                  }`}
-                  uuid={index}
-                >
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="flex gap-2 items-center text-xl text-white">
-                      <BsChevronDown className="text-gold" />
-                      <h4>{title}</h4>
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel className="text-[#d1d5db] pl-4">
-                    <p className="mt-2 ml-4">{description}</p>
-                  </AccordionItemPanel>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
+    <section className="py-10 bg-gradient-to-b from-gray-900 to-black sm:py-16 lg:py-24">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Explore Common Questions
+          </h2>
         </div>
+        <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+          {everythingData.map(({ title, description }, index) => (
+            <div
+              key={index}
+              className="transition-all duration-500 bg-gray-800 bg-opacity-50 border border-gray-600 shadow-lg cursor-pointer hover:bg-gray-700 backdrop-filter backdrop-blur-lg rounded-lg"
+            >
+              <button
+                type="button"
+                id={`question${index + 1}`}
+                data-state="closed"
+                className="flex items-center justify-between w-full px-4 py-5 sm:p-6 rounded-t-lg"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <span className="flex text-lg font-semibold text-white">{title}</span>
+                <BsChevronDown
+                  id={`arrow${index + 1}`}
+                  className={`w-6 h-6 text-gray-400 transition-transform transform ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
+                  openIndex === index ? "max-h-screen" : "max-h-0"
+                }`}
+              >
+                {openIndex === index && (
+                  <div
+                    id={`answer${index + 1}`}
+                    className="px-4 pb-5 sm:px-6 sm:pb-6 text-white"
+                  >
+                    <p>{description}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="text-center text-gray-400 text-base mt-9">
+          Still have questions? 
+          <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-white focus:text-white hover-underline">
+            <br></br>Contact our support
+          </span>
+        </p>
       </div>
-      <div className="relative h-96 w-2/4">
-        <Image src="/everything.webp" fill alt="everything" />
-      </div>
-    </div>
+    </section>
   );
 }
 
