@@ -32,7 +32,7 @@ function AddReview() {
   return (
     <div className="mb-10">
       <h3 className="text-2xl my-5 font-normal   text-[#404145]">
-        Give Kishan Sheth a Review
+        Your review matters a lot to us!
       </h3>
 
       <div className="flex  flex-col  items-start justify-start gap-3">
